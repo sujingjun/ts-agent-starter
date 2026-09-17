@@ -1,0 +1,5 @@
+
+> ts-agent-starter@0.2.0 test:mcp
+> tsx integrations/mcp/client.ts
+
+MCP stdio 握手、发现与调用断言通过

@@ -1,0 +1,24 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { attention, softmax, trainCategoricalPolicy, groupAdvantages, clippedPolicyObjective, TownSimulation, planDay, deepResearch, EvidenceIndex, ScriptedModel, finalTurn, AgentRunner, MemoryRunStore, ToolRegistry, DemoModel, calculatorTool } from '../src/core/index.js';
+test('Softmax 数值稳定', () => { const p = softmax([1000, 1001]); assert.ok(Math.abs(p[0] + p[1] - 1) < 1e-8); });
+test('注意力输出有正确维度', () => { const r = attention([1, 0], [[1, 0], [0, 1]], [[10, 0], [0, 10]]); assert.equal(r.output.length, 2); assert.ok(r.weights[0] > r.weights[1]); });
+test('小型监督策略训练确实降低损失', () => { const r = trainCategoricalPolicy(2); assert.ok(r.losses.at(-1) < r.losses[0]); assert.ok(r.probabilities[2] > .8); });
+test('组内优势均值接近零', () => { const a = groupAdvantages([1, 2, 3]); assert.ok(Math.abs(a.reduce((s, x) => s + x, 0)) < 1e-8); });
+test('相同奖励不会除零', () => assert.deepEqual(groupAdvantages([1, 1]), [0, 0]));
+test('策略剪切限制正向比例', () => assert.equal(clippedPolicyObjective(2, 1), 1.2));
+test('旅行约束执行预算与天气', () => { const r = planDay([{ id: 'a', name: '公园', durationMinutes: 60, cost: 0, indoor: false }, { id: 'b', name: '展馆', durationMinutes: 60, cost: 20, indoor: true }], { minutes: 90, budget: 30, rainy: true }); assert.equal(r.selected.length, 1); assert.equal(r.selected[0]?.id, 'b'); });
+test('小镇容量约束和记忆', () => { const t = new TownSimulation([{ id: 'park', name: '公园', capacity: 1 }], [{ id: 'a', name: '甲', location: 'home', plan: ['park'], memory: [] }, { id: 'b', name: '乙', location: 'home', plan: ['park'], memory: [] }]); const r = t.step(); assert.equal(r.events.length, 2); assert.match(r.events[1], /等待/); assert.equal(t.citizens[1].memory.length, 1); });
+test('深度研究保留检索证据并验证引用', async () => { const index = new EvidenceIndex(); index.add({ id: 'd', title: 'MCP', tenantId: 'a', text: 'MCP 工具需要宿主授权', source: 'local://d', updatedAt: '2026-09-17' }); const id = index.search('a', 'MCP')[0].id; const m = new ScriptedModel([finalTurn('{"queries":["MCP"],"outline":["权限"]}'), finalTurn(`工具需要授权 [${id}]`), finalTurn('{"gaps":[]}')]); const r = await deepResearch(m, { search: async (t, q, n) => index.search(t, q, n) }, 'a', 'MCP'); assert.equal(r.citations.valid, true); assert.equal(r.coverageConfirmed, true); });
+test('深度研究空证据不伪造结论', async () => { const m = new ScriptedModel([finalTurn('{"queries":["未知"],"outline":["事实"]}')]); const r = await deepResearch(m, { search: async () => [] }, 'a', '未知'); assert.equal(r.coverageConfirmed, false); assert.equal(r.evidence.length, 0); });
+test('离线模型支持会话延续且不复用调用 ID', async () => { const runner = new AgentRunner({ model: new DemoModel(), registry: new ToolRegistry().register(calculatorTool()), store: new MemoryRunStore() }); const a = await runner.create({ tenantId: 'a', prompt: '计算 1+1' }); const first = await runner.execute('a', a.id); const b = await runner.create({ tenantId: 'a', prompt: '计算 2+2', sessionId: a.sessionId, history: first.messages.filter(m => m.role !== 'system') }); const second = await runner.execute('a', b.id); assert.equal(second.status, 'completed'); assert.match(second.result ?? '', /4/); });
+test('交付的技能可以读取且发现阶段不暴露正文', async () => {
+    const { SkillCatalog } = await import('../src/core/index.js');
+    const skills = new SkillCatalog();
+    await skills.loadDirectory('skills');
+    const rows = skills.metadata();
+    assert.equal(rows.length, 2);
+    assert.ok(rows.every(row => !('body' in row)));
+    assert.match(skills.load('research-report').body, /证据/);
+});
+//# sourceMappingURL=learning.test.js.map

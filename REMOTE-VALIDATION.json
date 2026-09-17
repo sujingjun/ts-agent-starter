@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-17T10:44:05.592Z",
+  "node": "v22.23.2",
+  "workflowRun": "35211892279",
+  "sourceCommit": "76458039ba41da62dabe02b1255930aaed1ea66b",
+  "mode": "demo-no-provider-key",
+  "statuses": {
+    "install": "passed",
+    "core": "passed",
+    "api-build": "failed",
+    "eval": "passed",
+    "docs": "passed",
+    "web-build": "passed",
+    "web-types": "passed",
+    "mcp": "passed"
+  }
+}

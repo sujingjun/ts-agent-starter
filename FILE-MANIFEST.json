@@ -12,7 +12,7 @@
     },
     {
       "path": ".github/workflows/check.yml",
-      "sha256": "f5deed3360cc2b91cf072a5f1f71fe6dd4380a272a19c1ada3c131df11977139"
+      "sha256": "63a8e34a47225e288a7c83efa4e86ddbd08c02591a692d8af04370a24803fa0c"
     },
     {
       "path": ".github/workflows/environment-probe.yml",
@@ -96,7 +96,7 @@
     },
     {
       "path": "apps/api/tsconfig.json",
-      "sha256": "97605c986d344d998ab370c1c0ab9f2636db646cba8a8eaa43636d83ba3c267e"
+      "sha256": "c0f4fa33e96a46cc808e302843bf7d0f5379b11ee2bfea53b26c49873a45f6ec"
     },
     {
       "path": "apps/cli/main.ts",
@@ -140,7 +140,7 @@
     },
     {
       "path": "apps/web/app/pages/native.vue",
-      "sha256": "3a166dfabb5d1a53401132b1cd685da2c52a1ab802b227460d9591eb762291cc"
+      "sha256": "5fe2588f16fb8e3524bfa1f6e466ce9c7deb4460ff00fcc10862ef423deccc67"
     },
     {
       "path": "apps/web/app/pages/README.md",
@@ -465,6 +465,10 @@
     {
       "path": "scripts/check-optional-syntax.mjs",
       "sha256": "c0fc5b7dc522a8dfab4ae00961602add53f1fa62f4fdd75f2acd228ae73939c1"
+    },
+    {
+      "path": "scripts/ci-verify.mjs",
+      "sha256": "53c4a113a9b0ea514d11f6bcd9a975aa0d4a35c8753cf62295205f3151d337e0"
     },
     {
       "path": "scripts/dev.mjs",

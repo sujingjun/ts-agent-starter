@@ -1,0 +1,6 @@
+
+> ts-agent-starter@0.2.0 build:api
+> tsc -p apps/api/tsconfig.json
+
+integrations/langchain/tests/framework.test.ts(37,21): error TS2339: Property 'tasks' does not exist on type 'never'.
+integrations/langchain/tests/framework.test.ts(37,32): error TS7006: Parameter 't' implicitly has an 'any' type.

@@ -1,0 +1,11 @@
+
+> ts-agent-starter@0.2.0 eval
+> node dist-core/evals/run.js
+
+{
+  "count": 50,
+  "passed": 50,
+  "passRate": 1,
+  "p95DurationMs": 1,
+  "totalTokens": 0
+}

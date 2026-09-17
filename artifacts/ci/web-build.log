@@ -1,0 +1,111 @@
+
+> ts-agent-starter@0.2.0 build:web
+> npm run build --workspace apps/web
+
+
+> @ts-agent/console@0.2.0 build
+> nuxt build
+
+┌  [36mBuilding Nuxt for production...[39m
+│
+●  [32mNuxt [1m4.5.2[22m[39m[90m (with [39m[90mNitro [1m2.13.4[22m[39m[90m, Vite [1m8.3.0[22m[39m[90m and Vue [1m3.5.43[22m[39m[90m)[39m
+[info] Nuxt Icon server bundle mode is set to `local`
+│
+●  Nitro preset: [36mnode-server[39m
+[info] Building client...
+[info] [36mvite v8.3.0 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 861 modules transformed.
+rendering chunks...
+computing gzip size...
+[info] node_modules/.cache/nuxt/.nuxt/dist/client/manifest.json                   2.68 kB │ gzip:  0.52 kB
+node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/error-500.B4nQBaYX.css    1.90 kB │ gzip:  0.72 kB
+node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/error-404.C0e4stit.css    2.42 kB │ gzip:  0.85 kB
+node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/entry.Cso7g4tP.css      216.14 kB │ gzip: 29.00 kB
+node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/CO3t8HuF.js               3.37 kB │ gzip:  1.53 kB
+node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/B6n-PRR1.js               3.72 kB │ gzip:  1.69 kB
+node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/x_EuyoDl.js               7.25 kB │ gzip:  2.89 kB
+node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/CPFXcA_k.js               7.82 kB │ gzip:  3.69 kB
+node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/-l_rN_Xz.js              11.03 kB │ gzip:  4.85 kB
+node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/CBWP4rlJ.js              26.24 kB │ gzip:  4.94 kB
+node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/C1jxHQ7A.js              29.24 kB │ gzip: 11.84 kB
+node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/N03PWdId.js              45.52 kB │ gzip: 16.69 kB
+node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/DhmsAq6G.js              88.54 kB │ gzip: 34.24 kB
+node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/Lm71s-ul.js             215.56 kB │ gzip: 69.13 kB
+
+[info] [32m✓ built in 2.78s[39m
+[success] Client built in 2793ms
+[info] Building server...
+[info] [36mvite v8.3.0 [32mbuilding ssr environment for production...[36m[39m
+transforming...
+✓ 705 modules transformed.
+rendering chunks...
+[info] node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/error-404-styles.DU8ouMQP.mjs         0.08 kB
+node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/error-500-styles.BMFE-pI7.mjs         0.08 kB
+node_modules/.cache/nuxt/.nuxt/dist/server/styles.mjs                                  0.35 kB
+node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/error-500-styles-1.mjs-DfXtDzO9.js    2.31 kB │ map:   5.17 kB
+node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/error-404-styles-1.mjs-Bs8qyehW.js    2.83 kB │ map:   5.81 kB
+node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/error-500-C3P2sbt2.js                 4.37 kB │ map:   5.50 kB
+node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/error-404-DN9L95R7.js                 5.03 kB │ map:   6.30 kB
+node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/head-j9elPuce.js                      8.27 kB │ map:  27.08 kB
+node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/ready-BNypDumx.js                     9.20 kB │ map:  29.08 kB
+node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/native-oYUuhd6O.js                   19.71 kB │ map:  24.31 kB
+node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/pages-BHfy5QTI.js                    28.78 kB │ map:  34.01 kB
+node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/Textarea-DYGfWTix.js                 51.77 kB │ map:  74.88 kB
+node_modules/.cache/nuxt/.nuxt/dist/server/server.mjs                                252.94 kB │ map: 484.63 kB
+
+[info] [32m✓ built in 1.79s[39m
+[success] Server built in 1802ms
+[info] [@nuxt/fonts] Downloading fonts...
+[log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L0UUMbndwVgHU.woff2[39m
+[log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L9UUMbndwVgHU.woff2[39m
+[log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L1UUMbndwVgHU.woff2[39m
+[log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L6UUMbndwVgHU.woff2[39m
+[log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L2UUMbndwVgHU.woff2[39m
+[log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L3UUMbndwVgHU.woff2[39m
+[log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L5UUMbndwV.woff2[39m
+[log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2[39m
+[log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2[39m
+[log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2[39m
+[log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2[39m
+[log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2[39m
+[log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2[39m
+[log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2[39m
+[success] [@nuxt/fonts] Fonts downloaded and cached.
+[success] [nitro] Generated public [36m.output/public[39m
+[info] [nitro] Building Nuxt Nitro server (preset: `node-server`, compatibility date: `2026-09-17`)
+[success] [nitro] Nuxt Nitro server built
+[90m  ├─ .output/server/chunks/_/error-500.mjs (5.05 kB)[39m[90m (2.07 kB gzip)[39m
+[90m  ├─ .output/server/chunks/_/error-500.mjs.map (188 B)[39m[90m (154 B gzip)[39m
+[90m  ├─ .output/server/chunks/build/error-404-DN9L95R7.mjs (5.66 kB)[39m[90m (2.34 kB gzip)[39m
+[90m  ├─ .output/server/chunks/build/error-404-DN9L95R7.mjs.map (189 B)[39m[90m (164 B gzip)[39m
+[90m  ├─ .output/server/chunks/build/error-404-styles.DU8ouMQP.mjs (2.89 kB)[39m[90m (1.08 kB gzip)[39m
+[90m  ├─ .output/server/chunks/build/error-404-styles.DU8ouMQP.mjs.map (217 B)[39m[90m (169 B gzip)[39m
+[90m  ├─ .output/server/chunks/build/error-500-C3P2sbt2.mjs (4.99 kB)[39m[90m (2.09 kB gzip)[39m
+[90m  ├─ .output/server/chunks/build/error-500-C3P2sbt2.mjs.map (189 B)[39m[90m (162 B gzip)[39m
+[90m  ├─ .output/server/chunks/build/error-500-styles.BMFE-pI7.mjs (2.36 kB)[39m[90m (956 B gzip)[39m
+[90m  ├─ .output/server/chunks/build/error-500-styles.BMFE-pI7.mjs.map (217 B)[39m[90m (169 B gzip)[39m
+[90m  ├─ .output/server/chunks/build/native-oYUuhd6O.mjs (20.3 kB)[39m[90m (5.6 kB gzip)[39m
+[90m  ├─ .output/server/chunks/build/native-oYUuhd6O.mjs.map (16.8 kB)[39m[90m (3.39 kB gzip)[39m
+[90m  ├─ .output/server/chunks/build/pages-BHfy5QTI.mjs (29.4 kB)[39m[90m (7.12 kB gzip)[39m
+[90m  ├─ .output/server/chunks/build/pages-BHfy5QTI.mjs.map (25.2 kB)[39m[90m (4.7 kB gzip)[39m
+[90m  ├─ .output/server/chunks/build/Textarea-DYGfWTix.mjs (51.8 kB)[39m[90m (7.59 kB gzip)[39m
+[90m  ├─ .output/server/chunks/build/Textarea-DYGfWTix.mjs.map (785 B)[39m[90m (274 B gzip)[39m
+[90m  ├─ .output/server/chunks/nitro/nitro.mjs (177 kB)[39m[90m (45.1 kB gzip)[39m
+[90m  ├─ .output/server/chunks/nitro/nitro.mjs.map (3.74 kB)[39m[90m (879 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/renderer.mjs (16.3 kB)[39m[90m (5.65 kB gzip)[39m
+[90m  ├─ .output/server/chunks/routes/renderer.mjs.map (1.12 kB)[39m[90m (302 B gzip)[39m
+[90m  ├─ .output/server/chunks/virtual/_virtual_spa-template.mjs (94 B)[39m[90m (100 B gzip)[39m
+[90m  ├─ .output/server/chunks/virtual/_virtual_spa-template.mjs.map (88 B)[39m[90m (97 B gzip)[39m
+[90m  ├─ .output/server/chunks/virtual/entry.mjs (280 kB)[39m[90m (59.6 kB gzip)[39m
+[90m  ├─ .output/server/chunks/virtual/entry.mjs.map (11.2 kB)[39m[90m (2.07 kB gzip)[39m
+[90m  ├─ .output/server/chunks/virtual/precomputed.mjs (6.48 kB)[39m[90m (961 B gzip)[39m
+[90m  ├─ .output/server/chunks/virtual/precomputed.mjs.map (181 B)[39m[90m (150 B gzip)[39m
+[90m  ├─ .output/server/chunks/virtual/styles.mjs (422 B)[39m[90m (249 B gzip)[39m
+[90m  ├─ .output/server/chunks/virtual/styles.mjs.map (164 B)[39m[90m (142 B gzip)[39m
+[90m  ├─ .output/server/index.mjs (396 B)[39m[90m (226 B gzip)[39m
+[90m  └─ .output/server/package.json (956 B)[39m[90m (400 B gzip)[39m
+[36mΣ Total size:[39m 3.25 MB (803 kB gzip)
+[success] [nitro] You can preview this build using `node .output/server/index.mjs`
+[log] │
+└  ✨ Build complete!
