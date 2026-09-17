@@ -1,0 +1,60 @@
+
+> ts-agent-starter@0.2.0 test:framework
+> npm run build:api && node --test apps/api/dist/integrations/langchain/tests/framework.test.js
+
+
+> ts-agent-starter@0.2.0 build:api
+> tsc -p apps/api/tsconfig.json
+
+TAP version 13
+# Subtest: 真正的 createAgent 使用演示模型调用计算器
+ok 1 - 真正的 createAgent 使用演示模型调用计算器
+  ---
+  duration_ms: 147.06158
+  type: 'test'
+  ...
+# Subtest: LangChain middleware 暂停并拒绝写入
+ok 2 - LangChain middleware 暂停并拒绝写入
+  ---
+  duration_ms: 38.227387
+  type: 'test'
+  ...
+# Subtest: LangChain middleware 批准后保存
+ok 3 - LangChain middleware 批准后保存
+  ---
+  duration_ms: 34.254677
+  type: 'test'
+  ...
+# Subtest: LangGraph 并行检索、结构化报告、审批、产物与历史
+ok 4 - LangGraph 并行检索、结构化报告、审批、产物与历史
+  ---
+  duration_ms: 49.152046
+  type: 'test'
+  ...
+# Subtest: LangGraph 拒绝与无证据分支不保存产物
+ok 5 - LangGraph 拒绝与无证据分支不保存产物
+  ---
+  duration_ms: 30.408155
+  type: 'test'
+  ...
+# Subtest: 上下文裁剪保留完整工具消息组
+ok 6 - 上下文裁剪保留完整工具消息组
+  ---
+  duration_ms: 0.590283
+  type: 'test'
+  ...
+# Subtest: 引用校验拒绝模型捏造的编号
+ok 7 - 引用校验拒绝模型捏造的编号
+  ---
+  duration_ms: 0.130575
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 818.308269

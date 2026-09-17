@@ -1,0 +1,19 @@
+
+> ts-agent-starter@0.2.0 test:experience
+> node --env-file=.env scripts/experience-smoke.mjs
+
+{
+  "passed": true,
+  "checks": [
+    "authentication",
+    "tool-loop",
+    "thread-memory",
+    "approval-reject",
+    "parallel-research",
+    "structured-report",
+    "approval-approve",
+    "artifact",
+    "history",
+    "sse"
+  ]
+}

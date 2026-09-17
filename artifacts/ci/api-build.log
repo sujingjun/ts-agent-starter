@@ -2,5 +2,3 @@
 > ts-agent-starter@0.2.0 build:api
 > tsc -p apps/api/tsconfig.json
 
-integrations/langchain/agent.ts(24,17): error TS2742: The inferred type of 'makeAgent' cannot be named without a reference to '../../node_modules/langchain/dist/agents/runtime.js'. This is likely not portable. A type annotation is necessary.
-integrations/langchain/suite.ts(8,23): error TS2742: The inferred type of 'makeSuite' cannot be named without a reference to '../../node_modules/langchain/dist/agents/runtime.js'. This is likely not portable. A type annotation is necessary.

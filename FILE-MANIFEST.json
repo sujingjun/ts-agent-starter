@@ -96,7 +96,7 @@
     },
     {
       "path": "apps/api/tsconfig.json",
-      "sha256": "c0f4fa33e96a46cc808e302843bf7d0f5379b11ee2bfea53b26c49873a45f6ec"
+      "sha256": "60d19faaa48ff010d6bf74cbfd0ffccf7410c961f1ecc9c896a95c44967c9f00"
     },
     {
       "path": "apps/cli/main.ts",

@@ -1,0 +1,6 @@
+
+> ts-agent-starter@0.2.0 test:postgres
+> node --env-file-if-exists=.env scripts/postgres-smoke.mjs
+
+通过：PostgreSQL 原生存储、租户隔离、队列租约、重新建立数据库连接后的 LangGraph 审批恢复。
+.env not found. Continuing without it.

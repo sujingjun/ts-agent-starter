@@ -1,0 +1,42 @@
+
+> ts-agent-starter@0.2.0 test:api
+> npm run build:api && node --test apps/api/dist/apps/api/tests/*.test.js
+
+
+> ts-agent-starter@0.2.0 build:api
+> tsc -p apps/api/tsconfig.json
+
+TAP version 13
+# Subtest: API 必须显式提供合法访问令牌
+ok 1 - API 必须显式提供合法访问令牌
+  ---
+  duration_ms: 1.439971
+  type: 'test'
+  ...
+# Subtest: StudioHost保存真实框架流事件并支持同线程继续
+ok 2 - StudioHost保存真实框架流事件并支持同线程继续
+  ---
+  duration_ms: 268.611011
+  type: 'test'
+  ...
+# Subtest: StudioHost审批不能由恢复绕过，批准后才有产物
+ok 3 - StudioHost审批不能由恢复绕过，批准后才有产物
+  ---
+  duration_ms: 94.638905
+  type: 'test'
+  ...
+# Subtest: 文件运行记录不会被当成丢失的内存checkpoint
+ok 4 - 文件运行记录不会被当成丢失的内存checkpoint
+  ---
+  duration_ms: 69.264995
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 982.910361
