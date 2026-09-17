@@ -215,8 +215,12 @@
       "sha256": "06d6881cf909edbfc4ccd61dfa30bb34654b966d6d9d9fe36973c27bbb2b713e"
     },
     {
+      "path": "docs/EXPERIENCE-GUIDE.md",
+      "sha256": "cea085e6b88ab9764adf689364fca021ffee37f89fa1a2c263487dc415a756e3"
+    },
+    {
       "path": "docs/LANGCHAIN-LANGGRAPH.md",
-      "sha256": "e0329359e9c1d1bc1977473ac2545549edd732638180278467fdbe152d47acfb"
+      "sha256": "8e523b781966aed97d1172242eceb1c236a4722514e39317cf3a5d6d18461ce0"
     },
     {
       "path": "docs/MODULES.md",
@@ -392,7 +396,7 @@
     },
     {
       "path": "integrations/langchain/tests/framework.test.ts",
-      "sha256": "3f789ea60e44e362f0b88b182b8da63dafd462b240ed99621fc64837114bf62c"
+      "sha256": "6ac12568d499a9c885a15e9080f5e83d4dfc63c403248b3d3b46238c7309f0a1"
     },
     {
       "path": "integrations/langchain/tests/README.md",
@@ -456,7 +460,7 @@
     },
     {
       "path": "scripts/browser-smoke.mjs",
-      "sha256": "3458d048ef09004e16f18c977125f7719bd493ee6d3642df1e178431c91e568e"
+      "sha256": "26917274dcb64f44ced645461ae103108e71829dc68865c4245bc1e806a0d85b"
     },
     {
       "path": "scripts/check-docs.mjs",

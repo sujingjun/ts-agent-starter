@@ -2,4 +2,4 @@
 > ts-agent-starter@0.2.0 docs:check
 > node scripts/check-docs.mjs
 
-{"modules":23,"documents":65,"status":"passed"}
+{"modules":23,"documents":66,"status":"passed"}

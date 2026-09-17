@@ -2,5 +2,7 @@
 > ts-agent-starter@0.2.0 build:api
 > tsc -p apps/api/tsconfig.json
 
-integrations/langchain/tests/framework.test.ts(37,21): error TS2339: Property 'tasks' does not exist on type 'never'.
-integrations/langchain/tests/framework.test.ts(37,32): error TS7006: Parameter 't' implicitly has an 'any' type.
+integrations/langchain/tests/framework.test.ts(12,21): error TS2305: Module '"../agent.js"' has no exported member 'trimConversation'.
+integrations/langchain/tests/framework.test.ts(13,38): error TS2305: Module '"../research.js"' has no exported member 'validateCitations'.
+integrations/langchain/tests/framework.test.ts(16,111): error TS2554: Expected 0 arguments, but got 1.
+integrations/langchain/tests/framework.test.ts(17,18): error TS2339: Property 'ingest' does not exist on type 'EvidenceIndex'.
