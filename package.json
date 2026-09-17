@@ -42,13 +42,14 @@
     "demo:graph": "node --env-file-if-exists=.env apps/api/dist/integrations/langchain/demo.js research",
     "migrate:graph": "node --env-file=.env apps/api/dist/integrations/langchain/migrate.js",
     "test:mcp": "tsx integrations/mcp/client.ts",
-    "test:browser": "node scripts/browser-smoke.mjs",
+    "test:browser": "node --env-file=.env scripts/browser-smoke.mjs",
     "test:postgres": "node --env-file-if-exists=.env scripts/postgres-smoke.mjs",
     "test:experience": "node --env-file=.env scripts/experience-smoke.mjs",
     "docs:check": "node scripts/check-docs.mjs",
     "demo": "node --env-file-if-exists=.env dist-core/apps/playground/main.js",
     "typecheck:web": "npm run typecheck --workspace apps/web",
-    "demo:browser": "tsx integrations/browser/main.ts --fixture"
+    "demo:browser": "tsx integrations/browser/main.ts --fixture",
+    "test:sandbox": "node scripts/sandbox-smoke.mjs"
   },
   "devDependencies": {
     "typescript": "5.8.3",

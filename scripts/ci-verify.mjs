@@ -1,4 +1,5 @@
 import { mkdir, writeFile, open } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import { spawn, spawnSync } from 'node:child_process';
 const dir='artifacts/ci';await mkdir(dir,{recursive:true});
 const statuses={};const servers=[];
@@ -21,9 +22,11 @@ async function ready(){
  return false;
 }
 try{
- const installed=await stage('install','npm',['install'],480000);
+ const installed=await stage('install','npm',[existsSync('package-lock.json')?'ci':'install'],480000);
  if(installed){
   await stage('core','npm',['run','test:core']);
+  const pulled=await stage('sandbox-image','docker',['pull','node:22-bookworm-slim'],180000);
+  if(pulled)await stage('sandbox','npm',['run','test:sandbox']);
   const api=await stage('api-build','npm',['run','build:api']);
   if(api){await stage('framework','npm',['run','test:framework']);await stage('api-tests','npm',['run','test:api']);}
   await stage('eval','npm',['run','eval']);await stage('docs','npm',['run','docs:check']);
@@ -36,6 +39,7 @@ try{
    await serve('api-runtime',['--env-file=.env','apps/api/dist/apps/api/src/main.js']);
    await serve('web-runtime',['apps/web/.output/server/index.mjs'],{HOST:'127.0.0.1',PORT:'3000',NUXT_PUBLIC_API_BASE:'http://127.0.0.1:3001'});
    const browser=await stage('playwright','npx',['playwright','install','--with-deps','chromium'],300000);
+   if(browser)await stage('browser-tool','npm',['run','demo:browser']);
    statuses.servers=await ready()?'passed':'failed';
    if(statuses.servers==='passed'){
     await stage('http','npm',['run','test:experience']);
@@ -50,5 +54,5 @@ finally{
  await writeFile('REMOTE-VALIDATION.json',JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify(report,null,2));
 }
-const required=['install','core','api-build','framework','api-tests','eval','docs','web-build','web-types','mcp','postgres','playwright','servers','http','browser'];
+const required=['install','core','api-build','framework','api-tests','eval','docs','web-build','web-types','mcp','postgres','playwright','servers','http','browser','browser-tool','sandbox-image','sandbox'];
 if(required.some(k=>statuses[k]!=='passed'))process.exitCode=1;

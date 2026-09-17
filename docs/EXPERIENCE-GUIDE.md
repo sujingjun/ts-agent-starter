@@ -27,11 +27,11 @@
 
 MCP：`npm run test:mcp`，使用官方 SDK 客户端/服务端做 stdio 往返。
 
-浏览器：先 `npm exec playwright install chromium`，再 `npm run test:browser`，使用本地 HTML 测试观察、文本提取与截图。不是公网登录或电脑操作。
+浏览器：先 `npm exec playwright install chromium`，再 `npm run demo:browser`，使用本地 HTML 测试观察、文本提取与截图。`npm run test:browser` 则验证完整 Nuxt 页面，需要 API/网页运行及 `.env` 中的本地访问令牌。两者都不是公网登录或电脑操作。
 
 PostgreSQL：配置独立测试数据库，再 `npm run migrate -- --vector` 和 `npm run migrate:graph`。业务表、向量扩展、LangGraph 检查点分别迁移。`npm run test:postgres` 检验存储、租户过滤、队列、向量查询及重新连接后的审批恢复。测试会执行幂等建表，不应对未经授权的生产库运行。
 
-容器：见 [部署](DEPLOYMENT.md)。沙箱仍需本机 Docker 和明确开启；容器配置文件存在并不证明隔离策略适合生产。
+容器：见 [部署](DEPLOYMENT.md)。固定测试沙箱：先 `docker pull node:22-bookworm-slim`，再 `npm run test:sandbox`，仅挂载新建临时目录，检查非 root、只读工作区和无网络。它验证固定工具，不等于完整 Docker Compose 部署或生产隔离评估。
 
 真实模型：见 [快速开始](../QUICKSTART.md)。显式切换 live，配置模型端点、模型名和服务端密钥；失败不自动降级。不要对 live 运行确定性演示回归。
 
