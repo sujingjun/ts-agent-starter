@@ -18,7 +18,7 @@
 | 6 | 长期笔记 | 新运行读取已批准事实 | 与会话记忆独立，按服务端身份隔离 |
 | 7 | 研究工作流 | 并行检索后暂停等待审阅 | 来源编号校验不等于语义事实全真 |
 | 8 | 批准报告，下载，查看检查点历史 | 下载 JSON，历史含 checkpointId | 未批准不能下载 |
-| 9 | 证据不足分支 | outcome=no_evidence，不生成虚假报告 | 演示用唯一未匹配查询 |
+| 9 | 证据不足分支 | outcome=evidence_missing，不生成虚假报告 | 演示用唯一未匹配查询 |
 | 10 | 技能加载 | 仅所选技能加入本次上下文 | 技能不能修改权限 |
 | 11 | 多轮与上下文 | 标准循环运行 | 短对话不应伪造压缩事件 |
 | 12 | 原生核心对照台 | 使用独立原生循环及事件 | 不可与框架线程相互续跑 |
@@ -29,7 +29,7 @@ MCP：`npm run test:mcp`，使用官方 SDK 客户端/服务端做 stdio 往返�
 
 浏览器：先 `npm exec playwright install chromium`，再 `npm run test:browser`，使用本地 HTML 测试观察、文本提取与截图。不是公网登录或电脑操作。
 
-PostgreSQL：配置独立测试数据库，再 `npm run db:migrate` 和 `npm run db:checkpoint`。业务表、向量扩展、LangGraph 检查点分别迁移。`npm run test:postgres` 检验存储、租户过滤、队列、向量查询及重新连接后的审批恢复。测试会执行幂等建表，不应对未经授权的生产库运行。
+PostgreSQL：配置独立测试数据库，再 `npm run migrate -- --vector` 和 `npm run migrate:graph`。业务表、向量扩展、LangGraph 检查点分别迁移。`npm run test:postgres` 检验存储、租户过滤、队列、向量查询及重新连接后的审批恢复。测试会执行幂等建表，不应对未经授权的生产库运行。
 
 容器：见 [部署](DEPLOYMENT.md)。沙箱仍需本机 Docker 和明确开启；容器配置文件存在并不证明隔离策略适合生产。
 

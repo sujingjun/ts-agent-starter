@@ -32,7 +32,7 @@ try {
  await choose('研究工作流');await settled('等待审批');await page.getByRole('button',{name:'批准所列操作'}).click();await settled();assert.match(await output.innerText(),/exported/);checks.push('research-approval');
  await page.getByRole('button',{name:'查看检查点历史'}).click();await page.waitForFunction(()=>document.body.innerText.includes('checkpointId'));checks.push('checkpoint-history');
  const [download]=await Promise.all([page.waitForEvent('download'),page.getByRole('button',{name:'下载已批准报告'}).click()]);assert.equal(download.suggestedFilename(),'research-report.json');await download.saveAs('artifacts/browser/research-report.json');checks.push('artifact-download');
- await choose('证据不足分支');await settled();assert.match(await output.innerText(),/no_evidence/);checks.push('no-evidence-branch');
+ await choose('证据不足分支');await settled();assert.match(await output.innerText(),/evidence_missing/);checks.push('no-evidence-branch');
  await choose('技能加载');await settled();assert.match(await output.innerText(),/hits/);checks.push('skill-selection');
  await choose('多轮与上下文');await settled();checks.push('context-entry');
  await page.locator('#access-token').fill('');
