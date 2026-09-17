@@ -2,7 +2,5 @@
 > ts-agent-starter@0.2.0 build:api
 > tsc -p apps/api/tsconfig.json
 
-integrations/langchain/tests/framework.test.ts(12,21): error TS2305: Module '"../agent.js"' has no exported member 'trimConversation'.
-integrations/langchain/tests/framework.test.ts(13,38): error TS2305: Module '"../research.js"' has no exported member 'validateCitations'.
-integrations/langchain/tests/framework.test.ts(16,111): error TS2554: Expected 0 arguments, but got 1.
-integrations/langchain/tests/framework.test.ts(17,18): error TS2339: Property 'ingest' does not exist on type 'EvidenceIndex'.
+integrations/langchain/agent.ts(24,17): error TS2742: The inferred type of 'makeAgent' cannot be named without a reference to '../../node_modules/langchain/dist/agents/runtime.js'. This is likely not portable. A type annotation is necessary.
+integrations/langchain/suite.ts(8,23): error TS2742: The inferred type of 'makeSuite' cannot be named without a reference to '../../node_modules/langchain/dist/agents/runtime.js'. This is likely not portable. A type annotation is necessary.

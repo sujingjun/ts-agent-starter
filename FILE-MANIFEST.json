@@ -216,7 +216,7 @@
     },
     {
       "path": "docs/EXPERIENCE-GUIDE.md",
-      "sha256": "cea085e6b88ab9764adf689364fca021ffee37f89fa1a2c263487dc415a756e3"
+      "sha256": "ec23c78056923d8c978eb8c8418ada7dc93462aee9c510a45e7896a3ac3bcff1"
     },
     {
       "path": "docs/LANGCHAIN-LANGGRAPH.md",
@@ -396,7 +396,7 @@
     },
     {
       "path": "integrations/langchain/tests/framework.test.ts",
-      "sha256": "6ac12568d499a9c885a15e9080f5e83d4dfc63c403248b3d3b46238c7309f0a1"
+      "sha256": "b7a5bcdee03109dde409e5bd548732080ebf9330c3c63d563d3bfade63acdcb8"
     },
     {
       "path": "integrations/langchain/tests/README.md",
@@ -460,11 +460,11 @@
     },
     {
       "path": "scripts/browser-smoke.mjs",
-      "sha256": "26917274dcb64f44ced645461ae103108e71829dc68865c4245bc1e806a0d85b"
+      "sha256": "e8a586ee9b1b85c9bff7abdd0601e82b02d1e7899911c26fad71b1b514ea255e"
     },
     {
       "path": "scripts/check-docs.mjs",
-      "sha256": "158c8489ec5cdf0478612444fb40b4d3572db9b02777a3824660635d8b7e4488"
+      "sha256": "f80f4ee75ff1afaa6114d8867fbae90cee60fd35e770cb51ab3ef0254f308b8c"
     },
     {
       "path": "scripts/check-optional-syntax.mjs",

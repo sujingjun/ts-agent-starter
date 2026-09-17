@@ -33,8 +33,8 @@ node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/N03PWdId.js              45.52 
 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/DhmsAq6G.js              88.54 kB │ gzip: 34.24 kB
 node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/Lm71s-ul.js             215.56 kB │ gzip: 69.13 kB
 
-[info] [32m✓ built in 3.98s[39m
-[success] Client built in 4000ms
+[info] [32m✓ built in 4.15s[39m
+[success] Client built in 4174ms
 [info] Building server...
 [info] [36mvite v8.3.0 [32mbuilding ssr environment for production...[36m[39m
 transforming...
@@ -54,8 +54,8 @@ node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/pages-BHfy5QTI.js              
 node_modules/.cache/nuxt/.nuxt/dist/server/_nuxt/Textarea-DYGfWTix.js                 51.77 kB │ map:  74.88 kB
 node_modules/.cache/nuxt/.nuxt/dist/server/server.mjs                                252.94 kB │ map: 484.63 kB
 
-[info] [32m✓ built in 2.60s[39m
-[success] Server built in 2612ms
+[info] [32m✓ built in 2.53s[39m
+[success] Server built in 2544ms
 [info] [@nuxt/fonts] Downloading fonts...
 [log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L0UUMbndwVgHU.woff2[39m
 [log] [@nuxt/fonts] [90m  ├─ https://fonts.gstatic.com/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L9UUMbndwVgHU.woff2[39m
@@ -109,7 +109,7 @@ node_modules/.cache/nuxt/.nuxt/dist/server/server.mjs                           
 [success] [nitro] You can preview this build using `node .output/server/index.mjs`
 [log] │
 └  ✨ Build complete!
-[warn] [33m[33m[PLUGIN_TIMINGS] [0mPlugin hooks ran for 3.8s of this 4.0s build (96%).
+[warn] [33m[33m[PLUGIN_TIMINGS] [0mPlugin hooks ran for 4.0s of this 4.1s build (97%).
 4 hooks are listed without a time. Their calls overlapped, so the time inside one call includes work from other calls. To find their cost, profile the build with `node --cpu-prof`:
   - nuxt:ssr-styles:client resolveId (44 calls)
   - nuxt:resolve-bare-imports resolveId (6 calls)
