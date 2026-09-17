@@ -5,21 +5,10 @@
     "outDir": "./dist",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "typeRoots": [
-      "./node_modules/@types",
-      "../../node_modules/@types"
-    ]
+    "typeRoots": ["./node_modules/@types", "../../node_modules/@types"],
+    "exactOptionalPropertyTypes": false,
+    "noEmitOnError": true
   },
-  "include": [
-    "src/**/*.ts",
-    "tests/**/*.ts",
-    "../worker/**/*.ts",
-    "../../src/**/*.ts",
-    "../../integrations/langchain/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "../web"
-  ]
+  "include": ["src/**/*.ts", "tests/**/*.ts", "../worker/**/*.ts", "../../src/**/*.ts", "../../integrations/langchain/**/*.ts"],
+  "exclude": ["node_modules", "dist", "../web"]
 }
