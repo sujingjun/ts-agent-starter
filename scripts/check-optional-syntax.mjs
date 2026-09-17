@@ -1,0 +1,7 @@
+
+import ts from 'typescript';
+import{readdir,readFile,writeFile,mkdir}from'node:fs/promises';import{join}from'node:path';
+const files=[];async function walk(root){for(const entry of await readdir(root,{withFileTypes:true})){if(['node_modules','dist','dist-core','.nuxt','.output'].includes(entry.name))continue;const p=join(root,entry.name);if(entry.isDirectory())await walk(p);else if(p.endsWith('.ts'))files.push(p);else if(p.endsWith('.vue'))files.push(p);}}
+for(const folder of ['apps/api','apps/worker','apps/web','integrations'])await walk(folder);
+const failures=[];for(const path of files){const raw=await readFile(path,'utf8');const text=path.endsWith('.vue')?(raw.match(/<script[^>]*>([\s\S]*?)<\/script>/)?.[1]??''):raw;const sf=ts.createSourceFile(path.replace(/\.vue$/,'.ts'),text,ts.ScriptTarget.Latest,true,ts.ScriptKind.TS);for(const diagnostic of sf.parseDiagnostics)failures.push({file:path,message:ts.flattenDiagnosticMessageText(diagnostic.messageText,'\n')});}
+const report={check:'syntax-only-NOT-typecheck-NOT-integration',fileCount:files.length,files,failures};await mkdir('artifacts/validation',{recursive:true});await writeFile('artifacts/validation/optional-syntax.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({fileCount:files.length,syntaxFailures:failures.length,note:'仅语法检查；未解析或验证外部依赖，未检查 Vue 模板。'},null,2));if(failures.length)process.exitCode=1;

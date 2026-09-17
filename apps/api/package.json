@@ -1,0 +1,10 @@
+{
+  "name": "@ts-agent/api",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm --prefix ../.. run build:api",
+    "test": "npm --prefix ../.. run test:api"
+  }
+}

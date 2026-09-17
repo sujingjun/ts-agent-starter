@@ -1,0 +1,13 @@
+.git
+node_modules
+**/node_modules
+.env
+.env.*
+!.env.example
+.data
+dist-core
+apps/api/dist
+apps/web/.nuxt
+apps/web/.output
+artifacts
+.bootstrap

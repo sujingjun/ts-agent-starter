@@ -1,0 +1,10 @@
+{
+  "name": "@ts-agent/browser",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "demo": "tsx main.ts",
+    "install:browser": "playwright install chromium"
+  }
+}

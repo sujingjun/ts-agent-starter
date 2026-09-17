@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "useUnknownInCatchVariables": true,
+    "skipLibCheck": true,
+    "types": [
+      "node"
+    ],
+    "rootDir": ".",
+    "outDir": "dist-core",
+    "declaration": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "apps/cli/**/*.ts",
+    "examples/**/*.ts",
+    "tests/**/*.ts",
+    "evals/**/*.ts",
+    "labs/**/*.ts",
+    "apps/playground/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist-core",
+    "integrations",
+    "apps/api",
+    "apps/web",
+    "apps/worker"
+  ]
+}

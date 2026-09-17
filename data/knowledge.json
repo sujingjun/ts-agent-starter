@@ -1,0 +1,34 @@
+[
+  {
+    "id": "agents",
+    "tenantId": "local",
+    "title": "智能体与工作流",
+    "text": "工作流由代码预定义顺序，智能体可根据工具反馈选择下一步。稳定、可预测任务应先考虑普通程序。",
+    "source": "local://course/agents",
+    "updatedAt": "2026-09-17"
+  },
+  {
+    "id": "mcp",
+    "tenantId": "local",
+    "title": "MCP 工具接入",
+    "text": "MCP 提供工具、资源、提示等标准接口。客户端连接服务器后可以发现工具。工具接入不等于授权；权限必须由宿主校验。",
+    "source": "local://course/mcp",
+    "updatedAt": "2026-09-17"
+  },
+  {
+    "id": "safety",
+    "tenantId": "local",
+    "title": "审批与副作用",
+    "text": "发送、发布和写入工具需要授权。执行请求超时不代表没有发生副作用。无法确定结果时应进入人工核对状态，不能盲目重发。",
+    "source": "local://course/safety",
+    "updatedAt": "2026-09-17"
+  },
+  {
+    "id": "context",
+    "tenantId": "local",
+    "title": "上下文工程",
+    "text": "每次模型调用前收集候选信息，选择必要证据，组织完整消息轮次。工具调用与工具响应不能分开裁剪。技能正文应按需加载。",
+    "source": "local://course/context",
+    "updatedAt": "2026-09-17"
+  }
+]

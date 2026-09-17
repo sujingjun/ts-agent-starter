@@ -1,0 +1,11 @@
+{
+  "name": "@ts-agent/mcp-demo",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "server": "tsx server.ts",
+    "demo": "tsx client.ts",
+    "client": "tsx client.ts"
+  }
+}

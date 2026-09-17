@@ -1,0 +1,25 @@
+{
+  "extends": "../../tsconfig.core.json",
+  "compilerOptions": {
+    "rootDir": "../..",
+    "outDir": "./dist",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "../../node_modules/@types"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "tests/**/*.ts",
+    "../worker/**/*.ts",
+    "../../src/**/*.ts",
+    "../../integrations/langchain/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "../web"
+  ]
+}

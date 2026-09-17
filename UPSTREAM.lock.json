@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-09-17",
+  "repositories": [
+    {
+      "name": "hello-agents",
+      "url": "https://github.com/datawhalechina/hello-agents.git",
+      "commit": "4f7682ceafe573d07cd8a7d0b89908500e83227d",
+      "commitDate": "2026-09-04T09:03:14Z",
+      "license": "CC-BY-NC-SA-4.0",
+      "role": "原理、章节和示例流程参考"
+    },
+    {
+      "name": "Agent-Learning-Hub",
+      "url": "https://github.com/datawhalechina/Agent-Learning-Hub.git",
+      "commit": "dddf777dde6788228136862f270203424a28efbc",
+      "commitDate": "2026-07-19T12:59:49Z",
+      "license": "MIT",
+      "role": "学习阶段和工程能力目录参考"
+    }
+  ],
+  "completeRepositoryCopyIncluded": false,
+  "fullBehaviorParityVerified": false
+}

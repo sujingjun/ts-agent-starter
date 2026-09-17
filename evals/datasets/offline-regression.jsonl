@@ -1,0 +1,50 @@
+{"id": "calc-01", "input": "计算 1+2*2", "expectedTool": "calculator", "expectedArguments": {"expression": "1+2*2"}, "expectedText": "5", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-02", "input": "计算 2+3*2", "expectedTool": "calculator", "expectedArguments": {"expression": "2+3*2"}, "expectedText": "8", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-03", "input": "计算 3+4*2", "expectedTool": "calculator", "expectedArguments": {"expression": "3+4*2"}, "expectedText": "11", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-04", "input": "计算 4+5*2", "expectedTool": "calculator", "expectedArguments": {"expression": "4+5*2"}, "expectedText": "14", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-05", "input": "计算 5+6*2", "expectedTool": "calculator", "expectedArguments": {"expression": "5+6*2"}, "expectedText": "17", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-06", "input": "计算 6+7*2", "expectedTool": "calculator", "expectedArguments": {"expression": "6+7*2"}, "expectedText": "20", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-07", "input": "计算 7+8*2", "expectedTool": "calculator", "expectedArguments": {"expression": "7+8*2"}, "expectedText": "23", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-08", "input": "计算 8+9*2", "expectedTool": "calculator", "expectedArguments": {"expression": "8+9*2"}, "expectedText": "26", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-09", "input": "计算 9+10*2", "expectedTool": "calculator", "expectedArguments": {"expression": "9+10*2"}, "expectedText": "29", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-10", "input": "计算 10+11*2", "expectedTool": "calculator", "expectedArguments": {"expression": "10+11*2"}, "expectedText": "32", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-11", "input": "计算 11+12*2", "expectedTool": "calculator", "expectedArguments": {"expression": "11+12*2"}, "expectedText": "35", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-12", "input": "计算 12+13*2", "expectedTool": "calculator", "expectedArguments": {"expression": "12+13*2"}, "expectedText": "38", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-13", "input": "计算 13+14*2", "expectedTool": "calculator", "expectedArguments": {"expression": "13+14*2"}, "expectedText": "41", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-14", "input": "计算 14+15*2", "expectedTool": "calculator", "expectedArguments": {"expression": "14+15*2"}, "expectedText": "44", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-15", "input": "计算 15+16*2", "expectedTool": "calculator", "expectedArguments": {"expression": "15+16*2"}, "expectedText": "47", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-16", "input": "计算 16+17*2", "expectedTool": "calculator", "expectedArguments": {"expression": "16+17*2"}, "expectedText": "50", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-17", "input": "计算 17+18*2", "expectedTool": "calculator", "expectedArguments": {"expression": "17+18*2"}, "expectedText": "53", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-18", "input": "计算 18+19*2", "expectedTool": "calculator", "expectedArguments": {"expression": "18+19*2"}, "expectedText": "56", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-19", "input": "计算 19+20*2", "expectedTool": "calculator", "expectedArguments": {"expression": "19+20*2"}, "expectedText": "59", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-20", "input": "计算 20+21*2", "expectedTool": "calculator", "expectedArguments": {"expression": "20+21*2"}, "expectedText": "62", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-21", "input": "计算 21+22*2", "expectedTool": "calculator", "expectedArguments": {"expression": "21+22*2"}, "expectedText": "65", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-22", "input": "计算 22+23*2", "expectedTool": "calculator", "expectedArguments": {"expression": "22+23*2"}, "expectedText": "68", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-23", "input": "计算 23+24*2", "expectedTool": "calculator", "expectedArguments": {"expression": "23+24*2"}, "expectedText": "71", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-24", "input": "计算 24+25*2", "expectedTool": "calculator", "expectedArguments": {"expression": "24+25*2"}, "expectedText": "74", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-25", "input": "计算 25+26*2", "expectedTool": "calculator", "expectedArguments": {"expression": "25+26*2"}, "expectedText": "77", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-26", "input": "计算 26+27*2", "expectedTool": "calculator", "expectedArguments": {"expression": "26+27*2"}, "expectedText": "80", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-27", "input": "计算 27+28*2", "expectedTool": "calculator", "expectedArguments": {"expression": "27+28*2"}, "expectedText": "83", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-28", "input": "计算 28+29*2", "expectedTool": "calculator", "expectedArguments": {"expression": "28+29*2"}, "expectedText": "86", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-29", "input": "计算 29+30*2", "expectedTool": "calculator", "expectedArguments": {"expression": "29+30*2"}, "expectedText": "89", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "calc-30", "input": "计算 30+31*2", "expectedTool": "calculator", "expectedArguments": {"expression": "30+31*2"}, "expectedText": "92", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-01", "input": "MCP", "expectedTool": "search_documents", "expectedArguments": {"query": "MCP"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-02", "input": "MCP 工具", "expectedTool": "search_documents", "expectedArguments": {"query": "MCP 工具"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-03", "input": "MCP 授权", "expectedTool": "search_documents", "expectedArguments": {"query": "MCP 授权"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-04", "input": "MCP 资源", "expectedTool": "search_documents", "expectedArguments": {"query": "MCP 资源"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-05", "input": "MCP 服务器", "expectedTool": "search_documents", "expectedArguments": {"query": "MCP 服务器"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-06", "input": "上下文工程", "expectedTool": "search_documents", "expectedArguments": {"query": "上下文工程"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-07", "input": "上下文 消息", "expectedTool": "search_documents", "expectedArguments": {"query": "上下文 消息"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-08", "input": "上下文 技能", "expectedTool": "search_documents", "expectedArguments": {"query": "上下文 技能"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-09", "input": "上下文 证据", "expectedTool": "search_documents", "expectedArguments": {"query": "上下文 证据"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-10", "input": "上下文 裁剪", "expectedTool": "search_documents", "expectedArguments": {"query": "上下文 裁剪"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-11", "input": "副作用", "expectedTool": "search_documents", "expectedArguments": {"query": "副作用"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-12", "input": "副作用 超时", "expectedTool": "search_documents", "expectedArguments": {"query": "副作用 超时"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-13", "input": "副作用 写入", "expectedTool": "search_documents", "expectedArguments": {"query": "副作用 写入"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-14", "input": "副作用 授权", "expectedTool": "search_documents", "expectedArguments": {"query": "副作用 授权"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-15", "input": "副作用 核对", "expectedTool": "search_documents", "expectedArguments": {"query": "副作用 核对"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-16", "input": "智能体", "expectedTool": "search_documents", "expectedArguments": {"query": "智能体"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-17", "input": "智能体 工作流", "expectedTool": "search_documents", "expectedArguments": {"query": "智能体 工作流"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-18", "input": "智能体 工具", "expectedTool": "search_documents", "expectedArguments": {"query": "智能体 工具"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-19", "input": "智能体 任务", "expectedTool": "search_documents", "expectedArguments": {"query": "智能体 任务"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}
+{"id": "retrieval-20", "input": "智能体 程序", "expectedTool": "search_documents", "expectedArguments": {"query": "智能体 程序"}, "expectedText": "e-", "forbiddenTools": ["patch_file", "sandbox_tests"]}

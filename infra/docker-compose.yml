@@ -1,0 +1,54 @@
+name: ts-agent-starter
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_USER: agents
+      POSTGRES_DB: agents
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?请在 .env 设置 PostgreSQL 密码}
+    ports: ["127.0.0.1:5432:5432"]
+    volumes: ["agent_data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agents -d agents"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+  migrate:
+    build: {context: .., dockerfile: apps/api/Dockerfile}
+    profiles: ["full"]
+    environment:
+      DATABASE_URL: postgresql://agents:${POSTGRES_PASSWORD}@postgres:5432/agents
+    command: ["sh", "-c", "node apps/api/dist/apps/api/src/migrate.js --vector && node apps/api/dist/integrations/langchain/migrate.js"]
+    depends_on:
+      postgres: {condition: service_healthy}
+  api:
+    build: {context: .., dockerfile: apps/api/Dockerfile}
+    profiles: ["full"]
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3001
+      MODEL_MODE: ${MODEL_MODE:-demo}
+      STORE_MODE: postgres
+      CHECKPOINT_MODE: postgres
+      EXECUTION_MODE: inline
+      LOCAL_TENANT_ID: local
+      DATABASE_URL: postgresql://agents:${POSTGRES_PASSWORD}@postgres:5432/agents
+      API_AUTH_TOKEN: ${API_AUTH_TOKEN:?请先执行 node scripts/init-env.mjs}
+      WEB_ORIGIN: http://127.0.0.1:3000,http://localhost:3000
+      LLM_BASE_URL: ${LLM_BASE_URL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-}
+    ports: ["127.0.0.1:3001:3001"]
+    volumes: ["app_data:/app/.data"]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+  web:
+    build: {context: .., dockerfile: apps/web/Dockerfile}
+    profiles: ["full"]
+    environment:
+      NUXT_PUBLIC_API_BASE: http://127.0.0.1:3001
+    ports: ["127.0.0.1:3000:3000"]
+    depends_on: [api]
+volumes:
+  agent_data:
+  app_data:
