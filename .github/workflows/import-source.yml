@@ -1,0 +1,109 @@
+name: import-and-verify
+on:
+  push:
+    paths: ['.bootstrap/manifest.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_PASSWORD: test-only-password
+          POSTGRES_USER: agents
+          POSTGRES_DB: agents
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U agents -d agents"
+          --health-interval 3s --health-timeout 3s --health-retries 30
+    env:
+      MODEL_MODE: demo
+      CHECKPOINT_MODE: memory
+      DATABASE_URL: postgresql://agents:test-only-password@127.0.0.1:5432/agents
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Import verified source map
+        run: |
+          node .bootstrap/unpack.mjs
+          node scripts/make-manifest.mjs
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'feat: import full TS Agent Starter with LangChain LangGraph and teaching docs'
+          git push origin HEAD:main
+      - name: Install and independently validate modules
+        run: |
+          mkdir -p artifacts/ci
+          cat > /tmp/check-stage.sh <<'SH'
+          stage() {
+            name="$1"; shift
+            set +e
+            "$@" > "artifacts/ci/${name}.log" 2>&1
+            code=$?
+            set -e
+            echo "$name=$code" >> artifacts/ci/status.env
+            tail -40 "artifacts/ci/${name}.log"
+            return 0
+          }
+          SH
+          source /tmp/check-stage.sh
+          stage install npm install
+          if [ -d node_modules/langchain ]; then
+            stage core npm run test:core
+            stage api-build npm run build:api
+            stage framework npm run test:framework
+            stage api-tests npm run test:api
+            stage eval npm run eval
+            stage docs npm run docs:check
+            stage web-build npm run build:web
+            stage web-types npm run typecheck:web
+            stage mcp npm run test:mcp
+            stage postgres npm run test:postgres
+            node scripts/init-env.mjs
+            node --env-file=.env apps/api/dist/apps/api/src/main.js > artifacts/ci/api-runtime.log 2>&1 &
+            NUXT_PUBLIC_API_BASE=http://127.0.0.1:3001 node apps/web/.output/server/index.mjs > artifacts/ci/web-runtime.log 2>&1 &
+            stage playwright npx playwright install --with-deps chromium
+            for i in $(seq 1 30); do curl -fsS http://127.0.0.1:3001/health && curl -fsS http://localhost:3000 >/dev/null && break; sleep 1; done
+            stage http npm run test:experience
+            stage browser node --env-file=.env scripts/browser-smoke.mjs
+          fi
+      - name: Record reproducible result
+        if: always()
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const path='artifacts/ci/status.env';
+          const statuses=fs.existsSync(path)?Object.fromEntries(fs.readFileSync(path,'utf8').trim().split('\n').filter(Boolean).map(l=>{const [k,v]=l.split('=');return[k,Number(v)===0?'passed':'failed'];})):{};
+          fs.writeFileSync('REMOTE-VALIDATION.json',JSON.stringify({at:new Date().toISOString(),node:process.version,workflowRun:process.env.GITHUB_RUN_ID,mode:'demo-no-provider-key',statuses},null,2));
+          JS
+          node scripts/make-manifest.mjs || true
+          git add -A ':!node_modules' ':!apps/web/node_modules' ':!.env' ':!.data' ':!apps/web/.nuxt' ':!apps/web/.output' ':!apps/api/dist'
+          git add -f artifacts/ci/ REMOTE-VALIDATION.json
+          if [ -d dist-core ]; then git add -f dist-core; fi
+          git commit -m 'test: record actual dependency installation and full-stack validation' || true
+          git push origin HEAD:main
+          git archive --format=zip --prefix=ts-agent-starter/ -o /tmp/TS-Agent-Starter-v0.2.0.zip HEAD
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: source-and-validation
+          path: |
+            /tmp/TS-Agent-Starter-v0.2.0.zip
+            artifacts/ci/
+            artifacts/browser/
+            REMOTE-VALIDATION.json
+      - name: Enforce all required checks
+        if: always()
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const r=JSON.parse(fs.readFileSync('REMOTE-VALIDATION.json','utf8'));
+          const required=['install','core','api-build','framework','api-tests','eval','docs','web-build','web-types','mcp','postgres','playwright','http','browser'];
+          if(required.some(k=>r.statuses[k]!=='passed'))process.exit(1);
+          JS

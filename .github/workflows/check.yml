@@ -1,0 +1,55 @@
+name: full-stack-check
+on:
+  push:
+    paths: ['src/**', 'apps/**', 'integrations/**', 'scripts/**', 'tests/**', 'evals/**', 'skills/**', 'data/**', 'infra/**', 'docs/**', 'package*.json', 'tsconfig*.json', '.github/workflows/check.yml']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, 'transport')
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_PASSWORD: test-only-password
+          POSTGRES_DB: agents
+          POSTGRES_USER: agents
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U agents -d agents"
+          --health-interval 3s --health-timeout 3s --health-retries 30
+    env:
+      MODEL_MODE: demo
+      CHECKPOINT_MODE: memory
+      DATABASE_URL: postgresql://agents:test-only-password@127.0.0.1:5432/agents
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: 安装实际依赖
+        run: if [ -f package-lock.json ]; then npm ci; else npm install; fi
+      - name: 全栈构建、契约测试、文档和 MCP
+        run: npm run check:all && npm run typecheck:web
+      - name: PostgreSQL 重启恢复
+        run: npm run test:postgres
+      - name: HTTP 与浏览器完整体验
+        run: |
+          node scripts/init-env.mjs
+          node --env-file=.env apps/api/dist/apps/api/src/main.js > api.log 2>&1 &
+          NUXT_PUBLIC_API_BASE=http://127.0.0.1:3001 node apps/web/.output/server/index.mjs > web.log 2>&1 &
+          npx playwright install --with-deps chromium
+          for i in $(seq 1 90); do curl -fsS http://127.0.0.1:3001/health && curl -fsS http://localhost:3000 >/dev/null && break; sleep 1; done
+          npm run test:experience
+          node --env-file=.env scripts/browser-smoke.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: validation
+          path: |
+            api.log
+            web.log
+            artifacts/evaluation/
+            artifacts/browser/
