@@ -15,14 +15,6 @@
       "sha256": "63a8e34a47225e288a7c83efa4e86ddbd08c02591a692d8af04370a24803fa0c"
     },
     {
-      "path": ".github/workflows/environment-probe.yml",
-      "sha256": "9980f63c483ce3a6fc99df5cd9a9ef138d8d892a05f0a1f3184ba648b7837e3e"
-    },
-    {
-      "path": ".github/workflows/import-source.yml",
-      "sha256": "407520e3ec15107c85b13491896daa975f0d510773ee081ae11b4dcdab4fd166"
-    },
-    {
       "path": ".gitignore",
       "sha256": "88c064dd499b4301dada9a7eeba879d29eddb7dd4ee1360166388ba9231ff9e7"
     },
@@ -216,11 +208,11 @@
     },
     {
       "path": "docs/EXPERIENCE-GUIDE.md",
-      "sha256": "ec23c78056923d8c978eb8c8418ada7dc93462aee9c510a45e7896a3ac3bcff1"
+      "sha256": "092678508feaf965b27f252f00fbea34c5087644ac6aee7b407da714f9577bfb"
     },
     {
       "path": "docs/LANGCHAIN-LANGGRAPH.md",
-      "sha256": "8e523b781966aed97d1172242eceb1c236a4722514e39317cf3a5d6d18461ce0"
+      "sha256": "b605f023844a994129314c8ffcb846c77f26c2a46ccd6b9b627335c8a7d35c6e"
     },
     {
       "path": "docs/MODULES.md",
@@ -444,7 +436,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "4c0d222b454b31915d5d43c8cd438826d4aab6e2d2eecb98994336238d56caa5"
+      "sha256": "b5fce975efeb46f9950e67807fe53acf31bc82b69735d2bc643253538b37d3fc"
     },
     {
       "path": "QUICKSTART.md",
@@ -472,7 +464,7 @@
     },
     {
       "path": "scripts/ci-verify.mjs",
-      "sha256": "53c4a113a9b0ea514d11f6bcd9a975aa0d4a35c8753cf62295205f3151d337e0"
+      "sha256": "bc72413f39fdba9471609af3d472a266cd09979edc2748339257b268c38646fd"
     },
     {
       "path": "scripts/dev.mjs",
@@ -504,7 +496,11 @@
     },
     {
       "path": "scripts/README.md",
-      "sha256": "0bc3b2009d68c29b21cd8026b0cf297afada7c509018cc351d94542036400f69"
+      "sha256": "05298153367aa360696f41db96f7bada787887bee7b987fa95f4f92b3e5e40cd"
+    },
+    {
+      "path": "scripts/sandbox-smoke.mjs",
+      "sha256": "b735a87243c418bd479a2d9e6005120eeefeadb6d8b05077ed4995ac81776281"
     },
     {
       "path": "scripts/setup.mjs",
@@ -712,7 +708,7 @@
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "4c2408313b9cb4a2c226c3af46b72b40f12dd9c7124d4069682147f3a64dff39"
+      "sha256": "ca6e880c4ad104fe5114b30bd60a5d2f14299831eafd36830c97abc55621765b"
     }
   ]
 }

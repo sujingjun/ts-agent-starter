@@ -1,0 +1,13 @@
+
+> ts-agent-starter@0.2.0 test:sandbox
+> node scripts/sandbox-smoke.mjs
+
+{
+  "passed": true,
+  "checks": [
+    "non-root-and-no-host-credentials",
+    "read-only-workspace",
+    "network-none"
+  ],
+  "output": "TAP version 13\n# Subtest: non-root, no host credentials\nok 1 - non-root, no host credentials\n  ---\n  duration_ms: 0.637231\n  type: 'test'\n  ...\n# Subtest: workspace mount is read-only\nok 2 - workspace mount is read-only\n  ---\n  duration_ms: 5.043904\n  type: 'test'\n  ...\n# Subtest: no non-loopback network interface\nok 3 - no non-loopback network interface\n  ---\n  duration_ms: 0.384823\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 53.543131\n"
+}

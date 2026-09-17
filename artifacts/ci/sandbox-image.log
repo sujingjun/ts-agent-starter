@@ -1,0 +1,26 @@
+22-bookworm-slim: Pulling from library/node
+a8ac7f6c67ab: Pulling fs layer
+cea7eb9bbe80: Pulling fs layer
+51c53f95c2ca: Pulling fs layer
+3cddab114eda: Pulling fs layer
+0282d618b52c: Pulling fs layer
+3cddab114eda: Waiting
+0282d618b52c: Waiting
+cea7eb9bbe80: Verifying Checksum
+cea7eb9bbe80: Download complete
+a8ac7f6c67ab: Verifying Checksum
+a8ac7f6c67ab: Download complete
+0282d618b52c: Verifying Checksum
+0282d618b52c: Download complete
+3cddab114eda: Verifying Checksum
+3cddab114eda: Download complete
+51c53f95c2ca: Verifying Checksum
+51c53f95c2ca: Download complete
+a8ac7f6c67ab: Pull complete
+cea7eb9bbe80: Pull complete
+51c53f95c2ca: Pull complete
+3cddab114eda: Pull complete
+0282d618b52c: Pull complete
+Digest: sha256:83f487e0a63425e5b4d146fb5e5be574bcbe1b7b843d3ebafdd95eaf7767a7e5
+Status: Downloaded newer image for node:22-bookworm-slim
+docker.io/library/node:22-bookworm-slim

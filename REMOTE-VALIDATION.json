@@ -1,12 +1,14 @@
 {
-  "at": "2026-09-17T10:58:20.659Z",
+  "at": "2026-09-17T11:06:41.740Z",
   "node": "v22.23.2",
-  "workflowRun": "35213100935",
-  "sourceCommit": "80ce2ae417d59c3f23246bba35b65ce9bd09a085",
+  "workflowRun": "35213823056",
+  "sourceCommit": "974028d425c933a7688f085307c86153fe173134",
   "mode": "demo-no-provider-key",
   "statuses": {
     "install": "passed",
     "core": "passed",
+    "sandbox-image": "passed",
+    "sandbox": "passed",
     "api-build": "passed",
     "framework": "passed",
     "api-tests": "passed",
@@ -18,6 +20,7 @@
     "postgres": "passed",
     "init-env": "passed",
     "playwright": "passed",
+    "browser-tool": "passed",
     "servers": "passed",
     "http": "passed",
     "browser": "passed"

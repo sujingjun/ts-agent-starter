@@ -10,679 +10,679 @@ TAP version 13
 # Subtest: 算术 2+3*4
 ok 1 - 算术 2+3*4
   ---
-  duration_ms: 4.507486
+  duration_ms: 2.78409
   type: 'test'
   ...
 # Subtest: 算术 (2+3)*4
 ok 2 - 算术 (2+3)*4
   ---
-  duration_ms: 0.264175
+  duration_ms: 0.287488
   type: 'test'
   ...
 # Subtest: 算术 -2*-3
 ok 3 - 算术 -2*-3
   ---
-  duration_ms: 0.140194
+  duration_ms: 0.122241
   type: 'test'
   ...
 # Subtest: 算术 2--3
 ok 4 - 算术 2--3
   ---
-  duration_ms: 0.139296
+  duration_ms: 0.126491
   type: 'test'
   ...
 # Subtest: 算术 0.5+.25
 ok 5 - 算术 0.5+.25
   ---
-  duration_ms: 0.126303
+  duration_ms: 0.119847
   type: 'test'
   ...
 # Subtest: 算术 10%3
 ok 6 - 算术 10%3
   ---
-  duration_ms: 0.08614
+  duration_ms: 0.101614
   type: 'test'
   ...
 # Subtest: 算术 15+30+25
 ok 7 - 算术 15+30+25
   ---
-  duration_ms: 0.186768
+  duration_ms: 0.202412
   type: 'test'
   ...
 # Subtest: 算术 +2
 ok 8 - 算术 +2
   ---
-  duration_ms: 0.091219
+  duration_ms: 0.096753
   type: 'test'
   ...
 # Subtest: 算术 (8/2)/(1+1)
 ok 9 - 算术 (8/2)/(1+1)
   ---
-  duration_ms: 0.277743
+  duration_ms: 0.336291
   type: 'test'
   ...
 # Subtest: 拒绝表达式 
 ok 10 - 拒绝表达式 
   ---
-  duration_ms: 0.550518
+  duration_ms: 0.711899
   type: 'test'
   ...
 # Subtest: 拒绝表达式 1/0
 ok 11 - 拒绝表达式 1/0
   ---
-  duration_ms: 0.16455
+  duration_ms: 0.197464
   type: 'test'
   ...
 # Subtest: 拒绝表达式 1%0
 ok 12 - 拒绝表达式 1%0
   ---
-  duration_ms: 0.071858
+  duration_ms: 0.093704
   type: 'test'
   ...
 # Subtest: 拒绝表达式 process.exit()
 ok 13 - 拒绝表达式 process.exit()
   ---
-  duration_ms: 0.056653
+  duration_ms: 0.094218
   type: 'test'
   ...
 # Subtest: 拒绝表达式 1;2
 ok 14 - 拒绝表达式 1;2
   ---
-  duration_ms: 0.050684
+  duration_ms: 0.066847
   type: 'test'
   ...
 # Subtest: 拒绝表达式 1 +
 ok 15 - 拒绝表达式 1 +
   ---
-  duration_ms: 0.05053
+  duration_ms: 0.061537
   type: 'test'
   ...
 # Subtest: 拒绝表达式 ((1)
 ok 16 - 拒绝表达式 ((1)
   ---
-  duration_ms: 0.053486
+  duration_ms: 0.065897
   type: 'test'
   ...
 # Subtest: 拒绝表达式 2(3)
 ok 17 - 拒绝表达式 2(3)
   ---
-  duration_ms: 0.097787
+  duration_ms: 0.073216
   type: 'test'
   ...
 # Subtest: 拒绝表达式 NaN
 ok 18 - 拒绝表达式 NaN
   ---
-  duration_ms: 0.068242
+  duration_ms: 0.070956
   type: 'test'
   ...
 # Subtest: 拒绝表达式 1e9
 ok 19 - 拒绝表达式 1e9
   ---
-  duration_ms: 0.13739
+  duration_ms: 0.133941
   type: 'test'
   ...
 # Subtest: Schema 严格对象
 ok 20 - Schema 严格对象
   ---
-  duration_ms: 0.705153
+  duration_ms: 0.857404
   type: 'test'
   ...
 # Subtest: 未知 Schema 不静默接受
 ok 21 - 未知 Schema 不静默接受
   ---
-  duration_ms: 0.098642
+  duration_ms: 0.119249
   type: 'test'
   ...
 # Subtest: 对象必须禁止额外参数
 ok 22 - 对象必须禁止额外参数
   ---
-  duration_ms: 0.078529
+  duration_ms: 0.097967
   type: 'test'
   ...
 # Subtest: JSON 不接受原型污染
 ok 23 - JSON 不接受原型污染
   ---
-  duration_ms: 0.158701
+  duration_ms: 0.137207
   type: 'test'
   ...
 # Subtest: JSON 不接受非有限数值
 ok 24 - JSON 不接受非有限数值
   ---
-  duration_ms: 0.098654
+  duration_ms: 0.134852
   type: 'test'
   ...
 # Subtest: Schema 数组边界
 ok 25 - Schema 数组边界
   ---
-  duration_ms: 0.213001
+  duration_ms: 0.215129
   type: 'test'
   ...
 # Subtest: 参数规范化稳定
 ok 26 - 参数规范化稳定
   ---
-  duration_ms: 0.133544
+  duration_ms: 0.152095
   type: 'test'
   ...
 # Subtest: 上下文按完整轮次裁剪
 ok 27 - 上下文按完整轮次裁剪
   ---
-  duration_ms: 0.369723
+  duration_ms: 0.418307
   type: 'test'
   ...
 # Subtest: 当前轮次过长必须报错
 ok 28 - 当前轮次过长必须报错
   ---
-  duration_ms: 0.156891
+  duration_ms: 0.185285
   type: 'test'
   ...
 # Subtest: 工具元数据计入预算
 ok 29 - 工具元数据计入预算
   ---
-  duration_ms: 0.131214
+  duration_ms: 0.175101
   type: 'test'
   ...
 # Subtest: 拒绝孤立工具消息
 ok 30 - 拒绝孤立工具消息
   ---
-  duration_ms: 0.097033
+  duration_ms: 0.119671
   type: 'test'
   ...
 # Subtest: 拒绝未完成工具调用
 ok 31 - 拒绝未完成工具调用
   ---
-  duration_ms: 0.088279
+  duration_ms: 0.115961
   type: 'test'
   ...
 # Subtest: Token 估算中文非零
 ok 32 - Token 估算中文非零
   ---
-  duration_ms: 0.066811
+  duration_ms: 0.081064
   type: 'test'
   ...
 # Subtest: 分块偏移对应原文
 ok 33 - 分块偏移对应原文
   ---
-  duration_ms: 0.57636
+  duration_ms: 0.602827
   type: 'test'
   ...
 # Subtest: 分块 ID 可复现
 ok 34 - 分块 ID 可复现
   ---
-  duration_ms: 0.636029
+  duration_ms: 0.854515
   type: 'test'
   ...
 # Subtest: 分块参数防死循环
 ok 35 - 分块参数防死循环
   ---
-  duration_ms: 0.185615
+  duration_ms: 0.21084
   type: 'test'
   ...
 # Subtest: 检索不能跨租户
 ok 36 - 检索不能跨租户
   ---
-  duration_ms: 2.570933
+  duration_ms: 2.389095
   type: 'test'
   ...
 # Subtest: 中文问题可检索
 ok 37 - 中文问题可检索
   ---
-  duration_ms: 0.258968
+  duration_ms: 0.268198
   type: 'test'
   ...
 # Subtest: 同一文档更新替换旧块
 ok 38 - 同一文档更新替换旧块
   ---
-  duration_ms: 0.741908
+  duration_ms: 0.427817
   type: 'test'
   ...
 # Subtest: 向量维度不一致被拒绝
 ok 39 - 向量维度不一致被拒绝
   ---
-  duration_ms: 0.208067
+  duration_ms: 0.135276
   type: 'test'
   ...
 # Subtest: 余弦相似度
 ok 40 - 余弦相似度
   ---
-  duration_ms: 0.17661
+  duration_ms: 0.064606
   type: 'test'
   ...
 # Subtest: 融合去除单榜重复
 ok 41 - 融合去除单榜重复
   ---
-  duration_ms: 8.91048
+  duration_ms: 6.052371
   type: 'test'
   ...
 # Subtest: 识别未知引用
 ok 42 - 识别未知引用
   ---
-  duration_ms: 0.528985
+  duration_ms: 0.286899
   type: 'test'
   ...
 # Subtest: 记忆作用域、过期、删除
 ok 43 - 记忆作用域、过期、删除
   ---
-  duration_ms: 1.109749
+  duration_ms: 0.42924
   type: 'test'
   ...
 # Subtest: 记忆写入必须有来源
 ok 44 - 记忆写入必须有来源
   ---
-  duration_ms: 0.222455
+  duration_ms: 0.094272
   type: 'test'
   ...
 # Subtest: Skill 元数据不加载正文
 ok 45 - Skill 元数据不加载正文
   ---
-  duration_ms: 0.830631
+  duration_ms: 0.513396
   type: 'test'
   ...
 # Subtest: Skill 不接受提权元数据
 ok 46 - Skill 不接受提权元数据
   ---
-  duration_ms: 0.339984
+  duration_ms: 0.192547
   type: 'test'
   ...
 # Subtest: Skill 重复名称失败
 ok 47 - Skill 重复名称失败
   ---
-  duration_ms: 0.500664
+  duration_ms: 0.443426
   type: 'test'
   ...
 # Subtest: Workflow 显式依赖顺序
 ok 48 - Workflow 显式依赖顺序
   ---
-  duration_ms: 0.58561
+  duration_ms: 0.362117
   type: 'test'
   ...
 # Subtest: Workflow 环检测
 ok 49 - Workflow 环检测
   ---
-  duration_ms: 0.613685
+  duration_ms: 0.313047
   type: 'test'
   ...
 # Subtest: PlanAndSolve 保留逐步执行语义
 ok 50 - PlanAndSolve 保留逐步执行语义
   ---
-  duration_ms: 0.952842
+  duration_ms: 0.524008
   type: 'test'
   ...
 # Subtest: 规划不是 JSON 时明确失败
 ok 51 - 规划不是 JSON 时明确失败
   ---
-  duration_ms: 0.269044
+  duration_ms: 0.149841
   type: 'test'
   ...
 # Subtest: 反思有界且保留审查记录
 ok 52 - 反思有界且保留审查记录
   ---
-  duration_ms: 0.633808
+  duration_ms: 0.294382
   type: 'test'
   ...
 # Subtest: 反思用尽预算不假装成功
 ok 53 - 反思用尽预算不假装成功
   ---
-  duration_ms: 0.933608
+  duration_ms: 0.358923
   type: 'test'
   ...
 # Subtest: F1 处理重复和空值
 ok 54 - F1 处理重复和空值
   ---
-  duration_ms: 0.229704
+  duration_ms: 0.126224
   type: 'test'
   ...
 # Subtest: 长期笔记按租户隔离、按内容幂等、可跨实例读取
 ok 55 - 长期笔记按租户隔离、按内容幂等、可跨实例读取
   ---
-  duration_ms: 14.061901
+  duration_ms: 9.480573
   type: 'test'
   ...
 # Subtest: 离线演示走真实审批，批准后才写入
 ok 56 - 离线演示走真实审批，批准后才写入
   ---
-  duration_ms: 9.367979
+  duration_ms: 5.557701
   type: 'test'
   ...
 # Subtest: 体验清单每个模块都有问题、期望与文档入口
 ok 57 - 体验清单每个模块都有问题、期望与文档入口
   ---
-  duration_ms: 0.340842
+  duration_ms: 0.270679
   type: 'test'
   ...
 # Subtest: 文件路径越界被拒绝
 ok 58 - 文件路径越界被拒绝
   ---
-  duration_ms: 10.531693
+  duration_ms: 6.756711
   type: 'test'
   ...
 # Subtest: 符号链接不能越权读取
 ok 59 - 符号链接不能越权读取
   ---
-  duration_ms: 3.238656
+  duration_ms: 2.299628
   type: 'test'
   ...
 # Subtest: 补丁带哈希前置条件且只改唯一文本
 ok 60 - 补丁带哈希前置条件且只改唯一文本
   ---
-  duration_ms: 12.87357
+  duration_ms: 171.749253
   type: 'test'
   ...
 # Subtest: diff 检查返回具体新增行
 ok 61 - diff 检查返回具体新增行
   ---
-  duration_ms: 0.543503
+  duration_ms: 0.599548
   type: 'test'
   ...
 # Subtest: Postgres 查询含租户参数（SQL 契约测试，非真实数据库）
 ok 62 - Postgres 查询含租户参数（SQL 契约测试，非真实数据库）
   ---
-  duration_ms: 0.971094
+  duration_ms: 1.174536
   type: 'test'
   ...
 # Subtest: pgvector 维度和模型同时过滤（契约测试）
 ok 63 - pgvector 维度和模型同时过滤（契约测试）
   ---
-  duration_ms: 0.257787
+  duration_ms: 0.323927
   type: 'test'
   ...
 # Subtest: 搜索服务结果保留来源编号
 ok 64 - 搜索服务结果保留来源编号
   ---
-  duration_ms: 27.070593
+  duration_ms: 29.566828
   type: 'test'
   ...
 # Subtest: Dify 发送阻塞工作流契约
 ok 65 - Dify 发送阻塞工作流契约
   ---
-  duration_ms: 0.808732
+  duration_ms: 0.586289
   type: 'test'
   ...
 # Subtest: 队列按服务端租户领取且 SQL 使用跳锁（契约测试）
 ok 66 - 队列按服务端租户领取且 SQL 使用跳锁（契约测试）
   ---
-  duration_ms: 0.881698
+  duration_ms: 0.721797
   type: 'test'
   ...
 # Subtest: Softmax 数值稳定
 ok 67 - Softmax 数值稳定
   ---
-  duration_ms: 1.399
+  duration_ms: 0.772425
   type: 'test'
   ...
 # Subtest: 注意力输出有正确维度
 ok 68 - 注意力输出有正确维度
   ---
-  duration_ms: 0.52215
+  duration_ms: 0.353487
   type: 'test'
   ...
 # Subtest: 小型监督策略训练确实降低损失
 ok 69 - 小型监督策略训练确实降低损失
   ---
-  duration_ms: 0.596686
+  duration_ms: 0.288826
   type: 'test'
   ...
 # Subtest: 组内优势均值接近零
 ok 70 - 组内优势均值接近零
   ---
-  duration_ms: 0.286716
+  duration_ms: 0.183924
   type: 'test'
   ...
 # Subtest: 相同奖励不会除零
 ok 71 - 相同奖励不会除零
   ---
-  duration_ms: 1.052796
+  duration_ms: 0.532737
   type: 'test'
   ...
 # Subtest: 策略剪切限制正向比例
 ok 72 - 策略剪切限制正向比例
   ---
-  duration_ms: 0.19643
+  duration_ms: 0.095533
   type: 'test'
   ...
 # Subtest: 旅行约束执行预算与天气
 ok 73 - 旅行约束执行预算与天气
   ---
-  duration_ms: 0.359824
+  duration_ms: 0.232988
   type: 'test'
   ...
 # Subtest: 小镇容量约束和记忆
 ok 74 - 小镇容量约束和记忆
   ---
-  duration_ms: 0.600057
+  duration_ms: 0.302308
   type: 'test'
   ...
 # Subtest: 深度研究保留检索证据并验证引用
 ok 75 - 深度研究保留检索证据并验证引用
   ---
-  duration_ms: 6.139879
+  duration_ms: 3.817977
   type: 'test'
   ...
 # Subtest: 深度研究空证据不伪造结论
 ok 76 - 深度研究空证据不伪造结论
   ---
-  duration_ms: 0.925128
+  duration_ms: 1.165509
   type: 'test'
   ...
 # Subtest: 离线模型支持会话延续且不复用调用 ID
 ok 77 - 离线模型支持会话延续且不复用调用 ID
   ---
-  duration_ms: 6.783023
+  duration_ms: 5.644459
   type: 'test'
   ...
 # Subtest: 交付的技能可以读取且发现阶段不暴露正文
 ok 78 - 交付的技能可以读取且发现阶段不暴露正文
   ---
-  duration_ms: 20.84518
+  duration_ms: 16.158967
   type: 'test'
   ...
 # Subtest: 模型请求序列化工具参数
 ok 79 - 模型请求序列化工具参数
   ---
-  duration_ms: 22.129972
+  duration_ms: 21.544135
   type: 'test'
   ...
 # Subtest: 模型 HTTP 错误不暴露凭证或正文
 ok 80 - 模型 HTTP 错误不暴露凭证或正文
   ---
-  duration_ms: 0.680751
+  duration_ms: 0.531831
   type: 'test'
   ...
 # Subtest: 模型参数格式错误明确失败
 ok 81 - 模型参数格式错误明确失败
   ---
-  duration_ms: 0.572827
+  duration_ms: 0.496497
   type: 'test'
   ...
 # Subtest: 模型地址限制
 ok 82 - 模型地址限制
   ---
-  duration_ms: 0.169805
+  duration_ms: 0.136787
   type: 'test'
   ...
 # Subtest: 流式分片工具参数组装
 ok 83 - 流式分片工具参数组装
   ---
-  duration_ms: 2.072081
+  duration_ms: 2.056038
   type: 'test'
   ...
 # Subtest: 截断模型流不能成功
 ok 84 - 截断模型流不能成功
   ---
-  duration_ms: 0.587039
+  duration_ms: 0.656744
   type: 'test'
   ...
 # Subtest: SSE 支持多行数据和注释
 ok 85 - SSE 支持多行数据和注释
   ---
-  duration_ms: 0.925595
+  duration_ms: 1.063088
   type: 'test'
   ...
 # Subtest: 嵌入结果按 index 重排
 ok 86 - 嵌入结果按 index 重排
   ---
-  duration_ms: 0.580701
+  duration_ms: 0.68986
   type: 'test'
   ...
 # Subtest: 工具闭环并产生持久事件
 ok 87 - 工具闭环并产生持久事件
   ---
-  duration_ms: 7.70884
+  duration_ms: 4.982259
   type: 'test'
   ...
 # Subtest: 未知工具得到结构化失败
 ok 88 - 未知工具得到结构化失败
   ---
-  duration_ms: 1.124734
+  duration_ms: 0.902419
   type: 'test'
   ...
 # Subtest: 无效参数不会执行工具
 ok 89 - 无效参数不会执行工具
   ---
-  duration_ms: 0.963514
+  duration_ms: 0.878538
   type: 'test'
   ...
 # Subtest: 额外工具参数被拒绝
 ok 90 - 额外工具参数被拒绝
   ---
-  duration_ms: 1.087794
+  duration_ms: 1.056166
   type: 'test'
   ...
 # Subtest: 工具输出也会校验
 ok 91 - 工具输出也会校验
   ---
-  duration_ms: 1.119776
+  duration_ms: 1.197036
   type: 'test'
   ...
 # Subtest: 审批前不执行副作用
 ok 92 - 审批前不执行副作用
   ---
-  duration_ms: 1.171112
+  duration_ms: 1.208964
   type: 'test'
   ...
 # Subtest: 拒绝审批不执行副作用
 ok 93 - 拒绝审批不执行副作用
   ---
-  duration_ms: 1.024972
+  duration_ms: 1.003537
   type: 'test'
   ...
 # Subtest: 不允许跨租户审批
 ok 94 - 不允许跨租户审批
   ---
-  duration_ms: 0.978383
+  duration_ms: 0.800961
   type: 'test'
   ...
 # Subtest: 审批必须匹配待执行 call ID
 ok 95 - 审批必须匹配待执行 call ID
   ---
-  duration_ms: 1.182839
+  duration_ms: 0.759981
   type: 'test'
   ...
 # Subtest: 终态运行不会重复执行
 ok 96 - 终态运行不会重复执行
   ---
-  duration_ms: 1.179233
+  duration_ms: 0.740544
   type: 'test'
   ...
 # Subtest: 模型步数有上限
 ok 97 - 模型步数有上限
   ---
-  duration_ms: 1.232984
+  duration_ms: 0.753109
   type: 'test'
   ...
 # Subtest: 重复调用达到上限
 ok 98 - 重复调用达到上限
   ---
-  duration_ms: 1.051525
+  duration_ms: 0.963962
   type: 'test'
   ...
 # Subtest: Token 超限停止后续行动
 ok 99 - Token 超限停止后续行动
   ---
-  duration_ms: 0.685777
+  duration_ms: 0.486475
   type: 'test'
   ...
 # Subtest: 请求前取消不会调用模型
 ok 100 - 请求前取消不会调用模型
   ---
-  duration_ms: 0.496657
+  duration_ms: 0.341442
   type: 'test'
   ...
 # Subtest: 模型超时可终止等待
 ok 101 - 模型超时可终止等待
   ---
-  duration_ms: 13.692735
+  duration_ms: 11.836276
   type: 'test'
   ...
 # Subtest: 副作用超时必须人工核对
 ok 102 - 副作用超时必须人工核对
   ---
-  duration_ms: 14.66496
+  duration_ms: 10.383621
   type: 'test'
   ...
 # Subtest: 崩溃恢复不会盲目重发非幂等写入
 ok 103 - 崩溃恢复不会盲目重发非幂等写入
   ---
-  duration_ms: 1.132993
+  duration_ms: 0.892542
   type: 'test'
   ...
 # Subtest: 读取工具可以从 executing 恢复
 ok 104 - 读取工具可以从 executing 恢复
   ---
-  duration_ms: 0.681091
+  duration_ms: 0.608972
   type: 'test'
   ...
 # Subtest: 并发写入使用 CAS 而非覆盖
 ok 105 - 并发写入使用 CAS 而非覆盖
   ---
-  duration_ms: 0.339449
+  duration_ms: 0.237272
   type: 'test'
   ...
 # Subtest: 文件存储可以跨实例恢复
 ok 106 - 文件存储可以跨实例恢复
   ---
-  duration_ms: 9.932808
+  duration_ms: 93.245607
   type: 'test'
   ...
 # Subtest: 观察者抛错不破坏业务
 ok 107 - 观察者抛错不破坏业务
   ---
-  duration_ms: 0.766919
+  duration_ms: 0.682588
   type: 'test'
   ...
 # Subtest: 重复工具 call ID 拒绝
 ok 108 - 重复工具 call ID 拒绝
   ---
-  duration_ms: 1.09063
+  duration_ms: 0.938633
   type: 'test'
   ...
 # Subtest: 空最终答案不冒充完成
 ok 109 - 空最终答案不冒充完成
   ---
-  duration_ms: 0.520062
+  duration_ms: 0.497536
   type: 'test'
   ...
 # Subtest: 危险工具默认拒绝
 ok 110 - 危险工具默认拒绝
   ---
-  duration_ms: 0.146871
+  duration_ms: 0.16261
   type: 'test'
   ...
 # Subtest: 创建不能用历史消息注入系统权限
 ok 111 - 创建不能用历史消息注入系统权限
   ---
-  duration_ms: 0.279237
+  duration_ms: 0.267597
   type: 'test'
   ...
 # Subtest: 取消执行中的非幂等写不能宣称已撤销
 ok 112 - 取消执行中的非幂等写不能宣称已撤销
   ---
-  duration_ms: 0.491923
+  duration_ms: 0.427645
   type: 'test'
   ...
 # Subtest: 取消尚未执行的任务保持明确终态
 ok 113 - 取消尚未执行的任务保持明确终态
   ---
-  duration_ms: 0.344722
+  duration_ms: 0.27169
   type: 'test'
   ...
 1..113
@@ -693,4 +693,4 @@ ok 113 - 取消尚未执行的任务保持明确终态
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 334.913498
+# duration_ms 464.816934

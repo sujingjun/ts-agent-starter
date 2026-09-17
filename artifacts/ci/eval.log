@@ -6,6 +6,6 @@
   "count": 50,
   "passed": 50,
   "passRate": 1,
-  "p95DurationMs": 2,
+  "p95DurationMs": 1,
   "totalTokens": 0
 }
