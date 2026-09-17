@@ -7,6 +7,7 @@
     "emitDecoratorMetadata": true,
     "typeRoots": ["./node_modules/@types", "../../node_modules/@types"],
     "exactOptionalPropertyTypes": false,
+    "declaration": false,
     "noEmitOnError": true
   },
   "include": ["src/**/*.ts", "tests/**/*.ts", "../worker/**/*.ts", "../../src/**/*.ts", "../../integrations/langchain/**/*.ts"],
